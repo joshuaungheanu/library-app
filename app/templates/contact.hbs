@@ -1,0 +1,17 @@
+<h1>Contact</h1>
+
+<!-- CONTACT VALIDATION FORM -->
+<br/><br/>
+
+<h2> Enter your email </h2>
+<div>
+  {{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}} {{textarea class="form-control" placeholder="Your message. (At least 5 characters.)" rows="7" value=message}}
+  <button class="btn btn-primary btn-lg btn-block" {{action 'saveInvitation'}} disabled= {{isDisabled}}>Request invitation</button>
+
+</div>
+
+{{#if responseMessage}}
+  <div class="alert alert-success">{{responseMessage}}</div>
+{{/if}}
+
+<br/><br/>
